@@ -15,3 +15,15 @@ docker run --name e2guardian -d \
   jusschwa/e2guardian-icap-x86
 ```
 
+### For use with squid
+```bash
+docker network create e2guardian
+# Start squid here
+
+docker run --name e2guardian -d \
+  --publish 1344:1344 \
+  --network e2guardian
+  --volume /path/to/e2gaurdian/lists:/etc/e2guardian/lists \
+  --name e2guardian
+  jusschwa/e2guardian-icap-x86
+```
