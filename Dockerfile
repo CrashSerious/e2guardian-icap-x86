@@ -12,7 +12,7 @@ RUN apt install -y e2guardian
 RUN rm -rf /var/lib/apt/lists/*
 
 COPY e2guardian.conf /etc/e2guardian/e2guardian.conf
-COPY e2guardianf1.conf /etc/e2guardian/e2guardian.conf
+COPY e2guardianf1.conf /etc/e2guardian/e2guardianf1.conf
 
 EXPOSE 1344
 
