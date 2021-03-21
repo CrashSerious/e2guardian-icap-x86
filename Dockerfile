@@ -4,7 +4,7 @@ RUN apk add --update autoconf automake gcc cmake g++ zlib zlib-dev pcre2 pcre2-d
 RUN git clone https://github.com/e2guardian/e2guardian.git && \
 	cd e2guardian && ./autogen.sh && ./configure --prefix=/ --exec_prefix=/usr --datarootdir=/usr/share && make && make install
 
-FROM alpine
+FROM alpine:3.12.1
 MAINTAINER Justin Schwartzbeck <justinmschw@gmail.com>
 
 COPY --from=builder /etc/e2guardian /etc/e2guardian
