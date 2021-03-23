@@ -5,7 +5,7 @@ I am creating this docker image as part of a solution for a content filter with 
 
 Baseimage
 ======================
-debian:buster
+alpine:3.12.1
 
 ### Quickstart 
 ```bash
