@@ -2,7 +2,7 @@ FROM alpine:3.12.1 as builder
 WORKDIR /tmp/buid
 RUN apk add --update autoconf automake gcc cmake g++ zlib zlib-dev pcre2 pcre2-dev build-base gcc abuild binutils binutils-doc gcc-doc pcre pcre-dev git
 RUN git clone https://github.com/e2guardian/e2guardian.git && \
-	cd e2guardian && ./autogen.sh && ./configure --prefix=/ --exec_prefix=/usr --datarootdir=/usr/share && make && make install
+	cd e2guardian && ./autogen.sh && ./configure --prefix=/ --exec_prefix=/usr --datarootdir=/usr/share --enable-clamd=yes --enable-icap=yes --enable-commandline=yes --enable-email=yes --enable-ntlm=yes --enable-sslmitm=yes --enable-pcre=yes && make && make install
 
 FROM alpine:3.12.1
 MAINTAINER Justin Schwartzbeck <justinmschw@gmail.com>
