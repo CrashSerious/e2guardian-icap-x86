@@ -1,6 +1,7 @@
 #e2guardian-icap-x86
 ======================
 This is a docker container made for x86 that contains e2guardian to be configured as an ICAP server.
+Additionally adding in MITM and clamd support.
 I am creating this docker image as part of a solution for a content filter with squid and e2guardian.
 
 Baseimage
